@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TD1</title>
     </script>
 </head>
 <body>
@@ -13,30 +13,8 @@
     Precision: <span id="precision"></span><br>
     vitesse: <span id="vitesse"></span><br>
     temps: <span id="temps"></span><br>
-    <script>
-        var options = {
-        enableHighAccuracy: true,
-        timeout: 5000,
-        maximumAge: 0,
-        };
-
-        function success(pos) {
-        var crd = pos.coords;
-        document.getElementById('longitude').textContent = `${crd.longitude}`;
-        document.getElementById('latitude').textContent = `${crd.latitude}`;
-        document.getElementById('hauteur').textContent = `${crd.altitude}`;
-        document.getElementById('precision').textContent = `${crd.accuracy}`;
-        document.getElementById('vitesse').textContent = `${crd.speed}`;
-        document.getElementById('temps').textContent = `${pos.timestamp}`;
-        }
-
-        function error(err) {
-        console.warn(`ERREUR (${err.code}): ${err.message}`);
-
-        }
-        navigator.geolocation.getCurrentPosition(success, error, options);
-        
-        
-    </script>  
+    <script src="geo.js"></script>
+</body>
+</html>  
 </body>
 </html>
