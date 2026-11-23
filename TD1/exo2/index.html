@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2 — Carte et itinéraire</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="../script.js" defer></script>
+</head>
+<body data-exercise="2">
+    <header class="page-header">
+        <nav aria-label="Navigation du TD1">
+            <a href="../index.html">Accueil TD1</a>
+            <a href="../exo1/index.html">Exercice 1</a>
+            <a href="index.html" aria-current="page">Exercice 2</a>
+        </nav>
+        <p class="eyebrow">TD1 · Exercice 2</p>
+        <h1>Explorer la carte</h1>
+
+    <main>
+        <section class="panel map-panel" aria-labelledby="heading-map">
+            <h2 id="heading-map">Position et repères</h2>
+            <div class="actions">
+                <button id="locate-position" type="button">Ma position</button>
+                <button id="show-riviera" class="secondary" type="button">Marseille et Nice</button>
+                <button id="show-bermuda" class="secondary" type="button">Triangle des Bermudes</button>
+            </div>
+            <p id="map-status" class="status" role="status">En attente de votre position.</p>
+            <div id="map" role="region" aria-label="Carte interactive des positions et des parcours"></div>
+            <dl class="coordinates map-coordinates">
+                <div><dt>Votre position</dt><dd id="position-summary">En attente</dd></div>
+                <div><dt>Distance jusqu’à Marseille</dt><dd id="distance-marseille">En attente</dd></div>
+            </dl>
+        </section>
+
+        <div class="measurements">
+            <section class="panel" aria-labelledby="heading-geojson">
+                <h2 id="heading-geojson">Données GeoJSON</h2>
+                <p>Affichez les centres des communes des Alpes-Maritimes (06). Cliquez sur un point pour connaître le nom de la commune.</p>
+                <button id="load-geojson" type="button">Charger les communes du 06</button>
+                <p id="geojson-status" class="status" role="status">Données non chargées.</p>
+            </section>
+
+            <section class="panel" aria-labelledby="heading-route">
+                <h2 id="heading-route">Itinéraire Nice – Marseille</h2>
+                <p>Tracez un parcours routier entre les deux centres-villes et consultez sa distance et sa durée estimée.</p>
+                <button id="load-route" type="button">Afficher l’itinéraire</button>
+                <p id="route-status" class="status" role="status">Itinéraire non chargé.</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

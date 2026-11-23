@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1 — Géolocalisation</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
+</head>
+<body data-exercise="1">
+    <header class="page-header">
+        <nav aria-label="Navigation du TD1">
+            <a href="../index.html">Accueil TD1</a>
+            <a href="index.html" aria-current="page">Exercice 1</a>
+            <a href="../exo2/index.html">Exercice 2</a>
+        </nav>
+        <p class="eyebrow">TD1 · Exercice 1</p>
+    </header>
+
+    <main>
+        <div class="measurements">
+            <section class="panel" aria-labelledby="heading-once">
+                <h2 id="heading-once">getCurrentPosition</h2>
+                <p id="status-once" class="status" role="status">En attente</p>
+                <dl class="coordinates">
+                    <div><dt>Longitude</dt><dd id="longitude">En attente</dd></div>
+                    <div><dt>Latitude</dt><dd id="latitude">En attente</dd></div>
+                    <div><dt>Altitude</dt><dd id="hauteur">En attente</dd></div>
+                    <div><dt>Précision estimée</dt><dd id="precision">En attente</dd></div>
+                    <div><dt>Vitesse</dt><dd id="vitesse">En attente</dd></div>
+                    <div><dt>Heure de la mesure</dt><dd id="temps">En attente</dd></div>
+                </dl>
+                <button id="refresh-position" type="button">Obtenir une nouvelle mesure</button>
+            </section>
+
+            <section class="panel" aria-labelledby="heading-watch">
+                <h2 id="heading-watch">watchPosition</h2>
+                <p>Les valeurs évoluent lorsque le navigateur reçoit une nouvelle position.</p>
+                <p id="status-watch" class="status" role="status">En attente</p>
+                <dl class="coordinates">
+                    <div><dt>Longitude</dt><dd id="longitude2">En attente</dd></div>
+                    <div><dt>Latitude</dt><dd id="latitude2">En attente</dd></div>
+                    <div><dt>Altitude</dt><dd id="hauteur2">En attente</dd></div>
+                    <div><dt>Précision estimée</dt><dd id="precision2">En attente</dd></div>
+                    <div><dt>Vitesse</dt><dd id="vitesse2">En attente</dd></div>
+                    <div><dt>Heure de la mesure</dt><dd id="temps2">En attente</dd></div>
+                </dl>
+                <div class="actions">
+                    <button id="start-watch" type="button">Démarrer le suivi</button>
+                    <button id="stop-watch" class="secondary" type="button" disabled>Arrêter le suivi</button>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
