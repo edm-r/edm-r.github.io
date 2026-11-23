@@ -227,7 +227,7 @@ function initialiserCarte() {
       communes.addLayer(nouveauCalque);
       carte.addLayer(communes);
       if (centrer) carte.fitBounds(nouveauCalque.getBounds(), { padding: [35, 35] });
-      afficherTexte("geojson-status", donnees.features.length + " communes affichées · source : geo.api.gouv.fr.");
+      afficherTexte("geojson-status", donnees.features.length + " communes affichées ");
     } catch (erreur) {
       afficherTexte("geojson-status", "Chargement des communes impossible. Réessayez avec le bouton. " +
         (communes.getLayers().length ? "Les données précédentes restent affichées." : ""));
@@ -261,7 +261,7 @@ function initialiserCarte() {
       itineraire.addLayer(nouveauCalque);
       carte.addLayer(itineraire);
       if (centrer) carte.fitBounds(nouveauCalque.getBounds(), { padding: [35, 35] });
-      afficherTexte("route-status", description + " Source : OSRM.");
+      afficherTexte("route-status", description);
     } catch (erreur) {
       afficherTexte("route-status", "Itinéraire OSRM indisponible. Réessayez avec le bouton. " +
         (itineraire.getLayers().length ? "Le trajet précédent reste affiché." : ""));
